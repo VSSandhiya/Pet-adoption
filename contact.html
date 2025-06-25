@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Furry Friends</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f2f2f2;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: blur(5px) brightness(0.8);
+    }
+
+    header {
+      background-color: rgba(20, 18, 45, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #f2f2f2;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #f2f2f2;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffcc00;
+    }
+
+    .contact-section {
+      max-width: 960px;
+      margin: 60px auto 30px;
+      flex: 1;
+      width: 90%;
+      z-index: 2;
+      position: relative;
+    }
+
+    .content-wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1, h4 {
+      color: #ffcc00;
+    }
+
+    label {
+      color: #f2f2f2;
+      font-weight: 500;
+    }
+
+    input.form-control,
+    textarea.form-control,
+    select.form-select {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 1px solid #ddd;
+      color: #000;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .contact-info-box {
+      background: rgba(240, 248, 255, 0.85);
+      border-left: 5px solid #007bff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info-box p {
+      font-size: 1rem;
+      margin: 10px 0;
+      color: #2c3e50;
+    }
+
+    .contact-info-box p strong {
+      color: #007bff;
+    }
+
+    #thankYouMsg {
+      display: none;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      text-align: center;
+      animation: fadeOut 5s ease forwards;
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; display: none; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(20, 18, 45, 0.9);
+      font-size: 0.9rem;
+      color: #f2f2f2;
+    }
+
+    @media (max-width: 768px) {
+      .content-wrapper {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <video autoplay muted loop class="video-bg">
+    <source src="https://v1.pinimg.com/videos/mc/720p/40/ea/79/40ea7968346e0a43490ede3c3b76ff16.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+ 
+  <header>
+    <div class="logo">Furry Friends</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+ 
+  <section class="contact-section">
+    <div class="content-wrapper">
+      <div id="thankYouMsg">Thank you for visiting Furry Friends! We’ll get back to you soon. 🐾</div>
+      <h1 class="text-center mb-4">Contact Us</h1>
+      <form id="contactForm">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" required />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Subject</label>
+          <select class="form-select" required>
+            <option value="">-- Please choose a subject --</option>
+            <option value="adoption">Pet Adoption Inquiry</option>
+            <option value="volunteer">Volunteering Opportunities</option>
+            <option value="donation">Donations & Support</option>
+            <option value="lost">Report a Lost or Found Pet</option>
+            <option value="general">General Question</option>
+            <option value="feedback">Feedback or Suggestion</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="5" required></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary px-4">Send Message</button>
+        </div>
+      </form>
+
+    
+      <div class="contact-info mt-5">
+        <h4>Reach Us At</h4>
+        <div class="contact-info-box">
+          <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+          <p><strong>✉️ Email:</strong> support@furryfriends.org</p>
+          <p><strong>📍 Address:</strong> 123 Pet Lane, Coimbatore, Tamil Nadu, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>&copy; 2025 Furry Friends. All Rights Reserved.</p>
+  </footer>
+
+ 
+</body>
+</html>

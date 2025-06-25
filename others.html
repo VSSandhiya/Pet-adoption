@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Other Pets - Furry Friends</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.pinimg.com/736x/e0/94/38/e09438070d59b925b2e6356a574b27e0.jpg') center/cover no-repeat;
+      filter: blur(6px) brightness(0.6);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(20, 18, 45, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: 500;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-template-rows: repeat(2, auto);  /* 2 rows */
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .gallery h1 {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: #ffcc00;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      opacity: 0.85;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      padding: 10px 15px;
+    }
+
+    .caption h5 {
+      margin: 0;
+      color: #ffcc00;
+      font-size: 1.2rem;
+    }
+
+    .caption p {
+      margin: 5px 0 0;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(20, 18, 45, 0.95);
+      font-size: 1rem;
+      color: #eee;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Furry Friends</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="services.html">Services</a>
+      <a href="dog.html">Dogs</a>
+      <a href="cat.html">Cats</a>
+      <a href="birds.html">Birds</a>
+      <a href="rabbits.html">Rabbits</a>
+      <a href="fishes.html">Fish</a>
+      <a href="others.html" class="active">Others</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="gallery">
+      <h1>Other Home-Friendly Pets</h1>
+
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/736x/b2/12/f6/b212f6adc92c1a4f8ed691ccaea4fa3d.jpg" alt="Hamster">
+        <div class="caption">
+          <h5>Hamster</h5>
+          <p>Small and easy to maintain, great for kids and apartments.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/736x/06/71/3b/06713b8d8142318319f5d9f64fcbb7d3.jpg" alt="Guinea Pig">
+        <div class="caption">
+          <h5>Guinea Pig</h5>
+          <p>Gentle and social creatures that love companionship.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/736x/ce/f0/dc/cef0dc57b027edf1bb3fcfad8a0fddeb.jpg" alt="Turkish Tukla">
+        <div class="caption">
+          <h5>Turkish Tukla</h5>
+          <p>Known for their unique feathers and calm, affectionate behavior.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/736x/a3/88/1c/a3881c926ee7b9b8b748920f18dd2985.jpg" alt="Ferret">
+        <div class="caption">
+          <h5>Ferret</h5>
+          <p>Playful and curious, ideal for interactive pet lovers.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Furry Friends. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

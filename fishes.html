@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fish Types - Furry Friends</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.pinimg.com/736x/43/f2/92/43f2924f1fb772e00bea416ff2c20e5a.jpg') center/cover no-repeat;
+      filter: blur(6px) brightness(0.6);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(20, 18, 45, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: 500;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .breed-gallery {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffcc00;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .card {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  color: #fff;
+  overflow: hidden;
+  animation: fadeIn 1.2s ease-in both;
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(171, 124, 124, 0.2);
+  filter: brightness(1.1);
+}
+
+
+    .card img {
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      cursor: pointer;
+    }
+
+    .card-title {
+      color: #ffcc00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(20, 18, 45, 0.95);
+      font-size: 0.95rem;
+      color: #eee;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card img {
+        height: 160px;
+      }
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal-overlay img {
+      max-height: 90%;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+
+    .modal-overlay span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Furry Friends</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="services.html">Services</a>
+      <a href="dog.html">Dogs</a>
+      <a href="cats.html">Cats</a>
+      <a href="rabbits.html">Rabbits</a>
+      <a href="birds.html">Birds</a>
+      <a href="fishes.html" class="active">Fish</a>
+      <a href="others.html">Others</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="breed-gallery">
+      <h1>Popular Fish Types</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Repeatable Card Format -->
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/01/6a/fa/016afacf1735c037a9e54adb398b6c19.jpg" alt="Goldfish">
+            <div class="card-body">
+              <h5 class="card-title">Goldfish</h5>
+              <p class="card-text">Classic and easy to care for, great for beginners.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/5d/4f/ee/5d4fee7974169c5b93991444d6340f00.jpg" alt="Betta Fish">
+            <div class="card-body">
+              <h5 class="card-title">Betta Fish</h5>
+              <p class="card-text">Vibrant and low maintenance, ideal for small tanks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/29/c0/2c/29c02c54a6cd9e687f5471af89e03569.jpg" alt="Guppy">
+            <div class="card-body">
+              <h5 class="card-title">Guppy</h5>
+              <p class="card-text">Colorful and active, perfect for community aquariums.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/7f/c3/ef/7fc3ef2afd20ea543ab6a0895dd7e63e.jpg" alt="Angelfish">
+            <div class="card-body">
+              <h5 class="card-title">Angelfish</h5>
+              <p class="card-text">Graceful swimmers with elegant fins and patterns.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/ae/be/4a/aebe4a0ec80974cec47d5e9fd44bba0c.jpg" alt="Neon Tetra">
+            <div class="card-body">
+              <h5 class="card-title">Neon Tetra</h5>
+              <p class="card-text">Tiny, colorful, peaceful fish ideal for schooling tanks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/cd/f1/a4/cdf1a4eb77afd4654433324952523cfa.jpg" alt="Molly Fish">
+            <div class="card-body">
+              <h5 class="card-title">Molly</h5>
+              <p class="card-text">Hardy and adaptable, great for both beginners and experts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Furry Friends. All Rights Reserved.</p>
+  </footer>
+
+ 

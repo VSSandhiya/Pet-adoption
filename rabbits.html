@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rabbit Breeds - Furry Friends</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://i.pinimg.com/736x/c5/03/c1/c503c142f2b1ca170cae53ca14b64bc5.jpg') center/cover no-repeat;
+      filter: blur(6px) brightness(0.5);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(20, 18, 45, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: 500;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .breed-gallery {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffcc00;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      color: #fff;
+      overflow: hidden;
+      animation: fadeIn 1s ease-in both;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .card-title {
+      color: #ffcc00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(20, 18, 45, 0.95);
+      font-size: 0.95rem;
+      color: #eee;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Furry Friends</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="services.html">Services</a>
+      <a href="dog.html">Dogs</a>
+      <a href="cats.html">Cats</a>
+      <a href="rabbits.html" class="active">Rabbits</a>
+      <a href="birds.html">Birds</a>
+      <a href="fishes.html">Fish</a>
+      <a href="others.html">Others</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  
+  <main>
+    <section class="breed-gallery">
+      <h1>Popular Rabbit Breeds</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- 6 Rabbit Cards -->
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/a9/80/52/a98052b06684f1c25a65a0377804944a.jpg" alt="Holland Lop">
+            <div class="card-body">
+              <h5 class="card-title">Holland Lop</h5>
+              <p class="card-text">Small, floppy-eared, and playful companions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Fast_Track%2C_Lilac_Mini_Rex.jpg" alt="Mini Rex">
+            <div class="card-body">
+              <h5 class="card-title">Mini Rex</h5>
+              <p class="card-text">Velvety soft fur and calm personality.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/52/00/e6/5200e64c8848c393fb7b5892c9dfb553.jpg" alt="Lionhead">
+            <div class="card-body">
+              <h5 class="card-title">Lionhead</h5>
+              <p class="card-text">Fluffy mane and affectionate behavior.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/6d/05/31/6d05315b8e2aad12523ade081fa190bc.jpg" alt="Netherland Dwarf">
+            <div class="card-body">
+              <h5 class="card-title">Netherland Dwarf</h5>
+              <p class="card-text">Tiny in size, big on personality and charm.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/a7/80/3d/a7803dde22ad495146d7ac5403788232.jpg" alt="Flemish Giant">
+            <div class="card-body">
+              <h5 class="card-title">Flemish Giant</h5>
+              <p class="card-text">Large and gentle, known for their calm demeanor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/28/f1/a4/28f1a48780003140d56208ab4f478c1a.jpg" alt="English Angora">
+            <div class="card-body">
+              <h5 class="card-title">English Angora</h5>
+              <p class="card-text">Fluffy wool coat and charming personality, perfect for grooming lovers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Furry Friends. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

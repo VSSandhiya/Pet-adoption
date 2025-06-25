@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cat Breeds We Contain - Furry Friends</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://i.pinimg.com/736x/e4/71/88/e471887ddb632c3cc2edc9e7290a36a5.jpg') center/cover no-repeat;
+      filter: blur(6px) brightness(0.6);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(20, 18, 45, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: 500;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .breed-gallery {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffcc00;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      color: #fff;
+    }
+
+    .card img {
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      animation: fadeIn 1.5s ease-in;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .card:hover img {
+      opacity: 0.65;
+    }
+
+    .card-title {
+      color: #ffcc00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(20, 18, 45, 0.95);
+      font-size: 0.95rem;
+      color: #eee;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <div class="logo">Furry Friends</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="services.html">Services</a>
+      <a href="dog.html">Dogs</a>
+      <a href="cats.html" class="active">Cats</a>
+      <a href="rabbits.html">Rabbits</a>
+      <a href="birds.html">Birds</a>
+      <a href="fishes.html">Fish</a>
+      <a href="others.html">Others</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+ 
+  <main>
+    <section class="breed-gallery">
+      <h1>Popular Cat Breeds</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/67/bc/af/67bcafa4fef934ced5775278f2f7155a.jpg" alt="Persian Cat">
+            <div class="card-body">
+              <h5 class="card-title">Persian Cat</h5>
+              <p class="card-text">Elegant and gentle, known for their long fur and sweet nature.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/ec/7d/fd/ec7dfd35cd3bfa6031aecc1b03ba3de2.jpg" alt="Siamese Cat">
+            <div class="card-body">
+              <h5 class="card-title">Siamese Cat</h5>
+              <p class="card-text">Social, vocal, and affectionate with striking blue eyes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFVrZdbVVVzkCtduL4yYSkWDg-IKwcMFizVQ&s" alt="Maine Coon">
+            <div class="card-body">
+              <h5 class="card-title">Maine Coon</h5>
+              <p class="card-text">Large and friendly, known as the gentle giants of the cat world.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/73/87/86/7387865c63a4c2ddc273f3ee9740345e.jpg" alt="Bengal Cat">
+            <div class="card-body">
+              <h5 class="card-title">Bengal Cat</h5>
+              <p class="card-text">Energetic and exotic, with leopard-like spots and high energy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/c9/1a/ce/c91ace86a786d06e895d00c702ba4e1b.jpg" alt="Ragdoll">
+            <div class="card-body">
+              <h5 class="card-title">Ragdoll</h5>
+              <p class="card-text">Relaxed and affectionate, perfect for families and kids.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/20/d4/64/20d4646247bd7033d6d76f64566f0052.jpg" alt="British Shorthair">
+            <div class="card-body">
+              <h5 class="card-title">British Shorthair</h5>
+              <p class="card-text">Calm and independent with a plush, round appearance.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Furry Friends. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

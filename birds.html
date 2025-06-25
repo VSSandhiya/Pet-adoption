@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bird Breeds - Furry Friends</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.pinimg.com/736x/9c/eb/56/9ceb56ad9cde425d2c9539923d59d5a8.jpg') center/cover no-repeat;
+      filter: blur(6px) brightness(0.6);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(20, 18, 45, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: 500;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .breed-gallery {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffcc00;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      color: #fff;
+      overflow: hidden;
+      animation: fadeIn 1.2s ease-in both;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.04);
+    }
+
+    .card img {
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .card-title {
+      color: #ffcc00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(20, 18, 45, 0.95);
+      font-size: 1rem;
+      color: #eee;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Furry Friends</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="services.html">Services</a>
+      <a href="dog.html">Dogs</a>
+      <a href="cats.html">Cats</a>
+      <a href="rabbits.html">Rabbits</a>
+      <a href="birds.html" class="active">Birds</a>
+      <a href="fishes.html">Fish</a>
+      <a href="others.html">Others</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  
+  <main>
+    <section class="breed-gallery">
+      <h1>Popular Bird Breeds</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/e4/c5/11/e4c51139f1abcbc22b8b88dd546e61e1.jpg" alt="Parakeet">
+            <div class="card-body">
+              <h5 class="card-title">Parakeet</h5>
+              <p class="card-text">Small, colorful, and social birds that are easy to care for.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/35/54/b2/3554b2a3b875c705500378daf73d4549.jpg" alt="Cockatiel">
+            <div class="card-body">
+              <h5 class="card-title">Cockatiel</h5>
+              <p class="card-text">Affectionate and vocal, great companions for bird lovers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/23/34/2f/23342f3f3b3b610366de392c24c38dc9.jpg" alt="Lovebird">
+            <div class="card-body">
+              <h5 class="card-title">Lovebird</h5>
+              <p class="card-text">Charming and energetic, lovebirds thrive on interaction.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/d4/68/65/d468659aedf77e9b40dc9105268527be.jpg" alt="Canary">
+            <div class="card-body">
+              <h5 class="card-title">Canary</h5>
+              <p class="card-text">Renowned for their singing, these birds are low maintenance.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/e7/44/cf/e744cf2ae546a5c79d9b5e342e85f46a.jpg" alt="Macaw">
+            <div class="card-body">
+              <h5 class="card-title">Macaw</h5>
+              <p class="card-text">Vibrant, large, and intelligent—macaws love attention and space.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/4d/86/e1/4d86e16daccf26294335440a342f2ebd.jpg" alt="African Grey">
+            <div class="card-body">
+              <h5 class="card-title">African Grey</h5>
+              <p class="card-text">One of the smartest parrots, known for mimicking speech and sounds.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+ 
+  <footer>
+    <p>&copy; 2025 Furry Friends. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
